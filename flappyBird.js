@@ -1,6 +1,6 @@
 
 
-
+// variables for the program
 var block = document.getElementById("block");
 var hole = document.getElementById("hole");
 var character = document.getElementById("character");
@@ -12,6 +12,8 @@ hole.addEventListener('animationiteration', () => {
     hole.style.top = random + "px";
     counter++;
 });
+
+// this function sets where the space to jump through is
 setInterval(function(){
     var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     if(jumping==0){
@@ -27,6 +29,7 @@ setInterval(function(){
     }
 },10);
 
+// this function allows the jump action
 function jump(){
     jumping = 1;
     let jumpCount = 0;
